@@ -1,0 +1,6 @@
+# seed.yaml
+organ: PERSONAL
+tier: primary
+status: LOCAL
+produces: []
+consumes: []

@@ -21,16 +21,17 @@
     "lint:fix": "eslint js/main.js js/page.js js/pageData.js js/images.js js/diary.js js/ogod.js js/analytics.js --fix",
     "format": "prettier --write '**/*.{js,css,html,md}'",
     "format:check": "prettier --check '**/*.{js,css,html,md}'",
-    "validate:package-lock": "node scripts/validate-package-lock.js"
+    "validate:package-lock": "node scripts/validate-package-lock.js",
+    "test": "node --test js/test/tests.js js/test/namingTests.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/4-b100m/etceter4.git"
+    "url": "git+https://github.com/4444J99/etceter4.git"
   },
   "author": "et ceter4",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/4-b100m/etceter4/issues"
+    "url": "https://github.com/4444J99/etceter4/issues"
   },
-  "homepage": "https://github.com/4-b100m/etceter4#readme"
+  "homepage": "https://github.com/4444J99/etceter4#readme"
 }
