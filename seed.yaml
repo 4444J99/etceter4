@@ -1,7 +1,0 @@
-# seed.yaml
-organ: PERSONAL
-tier: primary
-status: ARCHIVED
-superseded_by: organvm-ii-poiesis/a-mavs-olevm
-produces: []
-consumes: []
