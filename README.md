@@ -30,6 +30,23 @@ This is the build for etceter4.com. Contact us if you see any strange things hap
 
 5. When you get to the folder, run npm install. This will install all the programs used in the project into the node_modules folder. These programs are used as aids in development and run tasks to build the page for production (more on this later).
 
+## Static source verification
+
+Run `python3 scripts/verify-static-site.py` with Python 3 and Node.js installed.
+This dependency-free check validates the five root HTML entrypoints, checks their
+nonempty local `src`, `data-src`, `poster`, and link references against actual
+nonempty files with exact filename case, and runs `node --check` on the ten
+first-party `js/*.js` files listed in the verifier. GitHub Actions runs this check
+on pull requests and pushes to `main`.
+
+The check does not contact external services or validate browser rendering,
+fragment navigation, CSS URLs, or resources constructed dynamically by JavaScript.
+The existing `npm test` command starts the development server; it is not a CI test.
+No npm installation or build is needed for static source verification.
+
+Run `python3 -m unittest discover -s scripts -p 'test_verify_static_site.py' -v`
+to exercise missing files, filename case, symlinks, and invalid JavaScript failures.
+
 ## Principles
 
 - Always use classes to describe the visual style of your html. Do not style using inline CSS, and IDs.
